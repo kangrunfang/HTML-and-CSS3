@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>音乐播放器制作</title>
+		<style>
+			article{
+				width:300px;
+				height:200px;
+				margin-top:0;
+			}
+			.list{
+				float:right
+			}
+			li{
+				list-style:none
+			}
+			footer{
+				background-color: black;
+				width:350px;
+				height:60px;
+				text-align: center;
+				padding-top: 5px;
+			}
+			audio{
+				background-color:black;
+			}
+		</style>
+		<script>
+			function play1(){
+				var aud=document.getElementById('music');
+				aud.src="林俊杰 - 被风吹过的夏天.mp3";
+				aud.play();
+			}
+			function play2(){
+				var aud=document.getElementById('music');
+				aud.src="张韶涵 - 隐形的翅膀.mp3";
+				aud.play();
+			}
+		</script>
+	</head>
+	<body>
+		<header>
+			<img src="img/top.PNG"/>
+		</header>
+		<article>
+			<ul>
+				<li><span>千千阙歌</span><span class="list"><a id="p1" href="#" onclick="play1()">播放</a></span></li>
+				<li><span>思念人之屋</span><span class="list"><a id="p2" href="#" onclick="play2()">播放</a></span></li>
+			</ul>
+		</article>
+		<footer>
+			<audio controls="controls" id="music">
+				<source src="林俊杰 - 被风吹过的夏天.mp3" type="audio/mpeg">
+				<source src="张韶涵 - 隐形的翅膀.mp3" type="audio/mpeg">
+			</audio>
+		</footer>
+	</body>
+</html>

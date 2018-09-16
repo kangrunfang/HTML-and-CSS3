@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>个人信息页面</title>
+		<style>
+			fieldset{
+				width: 500px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>请填写个人信息</h1>
+		<fieldset>
+			<legend>基本信息</legend>
+			姓名<input type="text" required="required" placeholder="请输入姓名"/><br/>
+			年龄<input type="number" required="required" placeholder="20"/>
+		</fieldset>
+		<fieldset>
+			<legend>你想在哪里收到邮件?</legend>
+			姓名<input type="email" required="required" placeholder="请输入邮箱" list="email"/>
+			<datalist id="email">
+				<option value="123@qq.com"/>
+				<option value="123@163.com"/>
+				<option value="123@gmail.com"/>
+				<option value="123@yahoo.com.cn"/>
+				<option value="123@126.com"/>
+			</datalist>
+		</fieldset>
+		<fieldset>
+			<legend>收入情况</legend>
+			月收入<input type="number" placeholder="20k+"/><br/>
+			银行卡<input type="text"/>
+			有效期<input type="text" placeholder="   年/   月/   日"/>
+		</fieldset>
+		<fieldset>
+			<legend>选择提交文件</legend>
+			文件<input type="file" multiple="multiple"/><br/>
+		</fieldset>
+		<br/>
+		<input type="button" value="提交"/>
+	</body>
+</html>
