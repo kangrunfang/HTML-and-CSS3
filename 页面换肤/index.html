@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>页面换肤</title>
+		<style>
+			legend{
+				color:red;
+				font-size:200%;
+				font-weight:600
+			}
+			#anniu{
+				border:2px solid #D0D0D0;
+				width:1200px;
+				height:50px;
+			}
+			#one{
+				width:20px;
+				height:20px;
+				background:grey;
+				float:left;
+				margin:15px
+			}
+			#two{
+				width:20px;
+				height:20px;
+				background:mediumpurple;
+				float:left;
+				margin:15px
+			}
+			#three{
+				width:20px;
+				height:20px;
+				background:red;
+				float:left;
+				margin:15px
+			}
+			#four{
+				width:20px;
+				height:20px;
+				background:deepskyblue;
+				float:left;
+				margin:15px
+			}
+			#five{
+				width:20px;
+				height:20px;
+				background:orange;
+				float:left;
+				margin:15px
+			}
+			#six{
+				width:20px;
+				height:20px;
+				background:lawngreen;
+				float:left;
+				margin:15px
+			}
+			#text{
+				border:2px solid #D0D0D0;
+				width:1000px;
+				height:100px;
+				margin:30px;
+				font-size:25px;
+				font-weight:400;
+			}
+		</style>
+	</head>
+	<body><!--点击颜色，方框上移，用定位，top设置成负数-->
+		<fieldset>
+			<legend>页面换肤</legend>
+			<div id="anniu">
+				<div id="one"></div>
+				<div id="two"></div>
+				<div id="three"></div>
+				<div id="four"></div>
+				<div id="five"></div>
+				<div id="six"></div>
+			</div>
+			<div id="text">
+				LocalStorage将数据保存在客户端本地的硬件设备中，即使浏览器被关闭了，<br/>
+				该数据依然存在，下次打开浏览器访问网站时仍然可以继续使用
+			</div>
+		</fieldset>
+	</body>
+	<script>
+		if(typeof localStorage=='undefined')
+       {
+           window.alert("浏览器不支持localStorage");
+}
+       else
+{
+			var storage=localStorage;
+			var colorArray=new Array("grey","mediumpurple","red","deepskyblue","orange","lawngreen");
+			
+			
+		var button1=document.getElementById("one");
+		button1.onclick=
+				function(){
+					var passage=document.getElementById('text');
+					passage.style.background=colorArray[0];
+					button1.style.position="relative";
+					button1.style.top="-5px";
+					window.localStorage.setItem('divBackColor',colorArray[0]);
+				}
+		var button2=document.getElementById("two");
+		button2.onclick=
+				function(){
+					var passage=document.getElementById('text');
+					passage.style.background=colorArray[1];
+					button2.style.position="relative";
+					button2.style.top="-5px";
+					button1.style.top="5px";
+					window.localStorage.setItem('divBackColor',colorArray[1]);
+				}
+		var button3=document.getElementById("three");
+		button3.onclick=
+				function(){
+					var passage=document.getElementById('text');
+					passage.style.background=colorArray[2];
+					button3.style.position="relative";
+					button3.style.top="-5px";
+					button2.style.top="5px";
+					window.localStorage.setItem('divBackColor',colorArray[2]);
+				}
+		var button4=document.getElementById("four");
+		button4.onclick=
+				function(){
+					var passage=document.getElementById('text');
+					passage.style.background=colorArray[3];
+					button4.style.position="relative";
+					button4.style.top="-5px";
+					button3.style.top="5px";
+					window.localStorage.setItem('divBackColor',colorArray[3]);
+				}
+		var button5=document.getElementById("five");
+		button5.onclick=
+				function(){
+					var passage=document.getElementById('text');
+					passage.style.background=colorArray[4];
+					button5.style.position="relative";
+					button5.style.top="-5px";
+					button4.style.top="5px";
+					window.localStorage.setItem('divBackColor',colorArray[4]);
+				}		
+		var button6=document.getElementById("six");
+		button6.onclick=
+				function(){
+					var passage=document.getElementById('text');
+					passage.style.background=colorArray[5];
+					button6.style.position="relative";
+					button6.style.top="-5px";
+					button5.style.top="5px";
+					window.localStorage.setItem('divBackColor',colorArray[5]);
+				}
+		window.onload=function colorLoad(){
+               document.getElementById("text").style.background=
+               window.localStorage.getItem('divBackColor');
+		  }
+}		
+	</script>
+</html>
