@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>钟表制作</title>
+	</head>
+	<body>
+		<canvas id="canvas" width="1000" height="1000"></canvas>
+		<link rel="stylesheet" href="css/clock.css" type="text/css"/>
+		<script>
+			var canvas=document.getElementById('canvas');
+			var context=canvas.getContext('2d');
+			function draw(){
+			context.clearRect(0,0,1000,1000);
+			//绘制钟表最外层圆圈
+			context.beginPath();
+			context.lineWidth=10;
+			context.strokeStyle="greenyellow";
+			context.arc(500,500,400,0,2*Math.PI,false);
+			context.stroke();
+			context.closePath();
+			
+			for(var j=0;j<12;j++){
+			//绘制时刻钟
+				context.beginPath(); 
+			    context.lineWidth =8; 
+			    context.strokeStyle="red";
+			    //保存当前绘图环境 
+			    context.save(); 
+			    //重置绘制起始位置(将圆心位置重置为0,0) 
+			    context.translate(500,500); 
+			    //旋转画布到一定的弧度 弧度=角度*PI/180 
+			    context.rotate(j*30* Math.PI/180);
+			    //渲染文字
+			    context.font="20px 宋体";
+			    var text=6+j;
+			    text=text>12?text-12:text;
+			    context.fillText(text,0,280);
+			    //设置绘制线条的起始位置 
+			    context.moveTo(0,-310); 
+			    //设置线条的结束位置 
+			    context.lineTo(0,-340);
+			    context.stroke(); 
+			    //还原初始的绘图环境 
+			    context.restore(); 
+			    context.closePath(); 
+			    
+			    
+			//绘制分刻钟
+				for(var i=1;i<5;i++){
+					context.beginPath(); 
+				    context.lineWidth = 5; 
+				    context.strokeStyle="black";
+				    //保存当前绘图环境 
+				    context.save(); 
+				    //重置绘制起始位置(将圆心位置重置为0,0) 
+				    context.translate(500,500); 
+				    //旋转画布到一定的弧度 弧度=角度*PI/180 
+				    context.rotate(6*i* Math.PI / 180+(j*30*Math.PI/180)); 
+				    //设置绘制线条的起始位置 
+				    context.moveTo(0,-320); 
+				    //设置线条的结束位置 
+				    context.lineTo(0,-340); 
+				 	context.stroke(); 
+				    //还原初始的绘图环境 
+				    context.restore(); 
+				    context.closePath(); 
+			   }
+			}
+			//绘制钟表圆中心
+			context.beginPath();
+			context.lineWidth=1;
+			context.strokeStyle="red";
+			context.arc(500,500,10,0,2*Math.PI,false);
+			context.fillStyle="red";
+			context.stroke();
+			context.fill();
+			context.closePath();
+			
+			context.beginPath();
+			context.lineWidth=1;
+			context.strokeStyle="black";
+			context.arc(500,500,5,0,2*Math.PI,false);
+			context.fillStyle="black";
+			context.stroke();
+			context.fill();
+			context.closePath();
+		    //获取时间
+		    var nowTime=new Date();
+		    var hours=nowTime.getHours();
+		    var minutes=nowTime.getMinutes();
+		    var seconds=nowTime.getSeconds();
+		    //防止小时超过12
+		    hours=hours>12?hours-12:hours;
+		    hours=hours+minutes/60;
+			//绘制时针
+			context.beginPath();
+			context.lineWidth=10;
+			context.strokeStyle="mediumpurple";
+			context.save();
+			context.translate(500,500);
+			context.rotate(hours*30*Math.PI/180);
+			context.moveTo(0,30);
+			context.lineTo(0,-170);
+			context.stroke();
+			context.restore();
+			context.closePath();
+			//绘制分针
+			context.beginPath();
+			context.lineWidth=7;
+			context.strokeStyle="hotpink";
+			context.save();
+			context.translate(500,500);
+			context.rotate(minutes*6*Math.PI/180);
+			context.moveTo(0,30);
+			context.lineTo(0,-200);
+			context.stroke();
+			context.restore();
+			context.closePath();
+			//绘制秒针
+			context.beginPath();
+			context.lineWidth=5;
+			context.strokeStyle="red";
+			context.save();
+			context.translate(500,500);
+			context.rotate(seconds*6*Math.PI/180);
+			context.moveTo(0,30);
+			context.lineTo(0,-250);
+			context.stroke();
+			
+			context.closePath();
+			
+			
+			context.beginPath();
+			context.lineWidth=1;
+			
+			context.arc(0,-200,10,0,2*Math.PI,false);
+			context.fillStyle="red";
+			context.stroke();
+			context.fill();
+			context.closePath();
+			
+			context.beginPath();
+			context.lineWidth=1;
+			context.arc(0,-200,5,0,2*Math.PI,false);
+			context.fillStyle="black";
+			context.stroke();
+			context.fill();
+			context.restore();
+			context.closePath();
+			}
+			setInterval(draw,1000);
+			
+		</script>
+	</body>
+</html>

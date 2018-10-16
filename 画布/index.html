@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/huabu.css" type="text/css"/>
+	</head>
+	<body>
+		<canvas id="canvas" width="1000" height="1000"></canvas>
+		<script>
+			/*
+			 两个三角形
+			context.moveTo(100,100);
+			context.lineTo(100,400);
+			context.lineTo(400,400);
+			context.lineTo(100,100);
+			context.lineWidth=5;
+			context.strokeStyle="blue";
+			context.fillStyle="yellow";
+			context.fill();
+			context.stroke();
+			
+			context.beginPath();
+			context.moveTo(500,100);
+			context.lineTo(500,400);
+			context.lineTo(800,400);
+			context.strokeStyle="red";
+			context.closePath();
+			context.stroke();
+			*/
+			
+			//context.arc(500,800,200,0,1*Math.PI,false);
+			
+			
+			/*
+			 //一行顺时针弧度
+			 for(var i=0;i<10;i++){
+				context.beginPath();
+				context.strokeStyle="greenyellow";
+				context.arc(50+100*i,60,40,0,2*Math.PI*(i+1)/10,false);
+				context.closePath();
+				context.stroke();
+			}*/
+			
+			
+			//绘制同心圆
+			/*
+			for(var i=0;i<=8;i++){
+				context.strokeStyle="#32CD32";
+				context.beginPath();
+				context.arc(0,400,i*50,0,1.5*Math.PI,true);
+				context.stroke();
+				context.closePath();
+			}
+			*/
+			
+			/*
+			//八卦图
+			//绘制大圆
+			context.beginPath();
+			context.arc(200,200,80,0.5*Math.PI,1.5*Math.PI,true);
+			context.fillStyle="yellow";
+			context.stroke();
+			context.fill();
+			context.closePath();
+			
+			context.beginPath();
+			context.arc(200,200,80,0.5*Math.PI,1.5*Math.PI,false);
+			context.fillStyle="black";
+			context.stroke();
+			context.fill();
+			context.closePath();
+			
+			//绘制小圆
+			context.beginPath();
+			context.arc(200,160,40,0,2*Math.PI,true);
+			context.fillStyle="yellow";
+			context.stroke();
+			context.fill();
+			context.closePath();
+			
+			
+			context.beginPath();
+			context.arc(200,240,40,0,2*Math.PI,true);
+			context.fillStyle="black";
+			context.stroke();
+			context.fill();
+			context.closePath();
+			
+			//绘制小圆心
+			context.beginPath();
+			context.arc(200,160,5,0,2*Math.PI,true);
+			context.fillStyle="black";
+			context.stroke();
+			context.fill();
+			context.closePath();
+			
+			context.beginPath();
+			context.arc(200,240,5,0,2*Math.PI,true);
+			context.fillStyle="yellow";
+			context.stroke();
+			context.fill();
+			context.closePath();
+			*/
+		</script>
+	</body>
+</html>
