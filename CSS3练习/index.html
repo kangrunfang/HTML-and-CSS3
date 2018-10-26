@@ -1,0 +1,99 @@
+<!--
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			div[id^="sec"]{
+				background-color: rgba(129,26,91,0.5);
+			}
+			p[id $="01"]{
+				background-color:deepskyblue;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="section1">示例文本1</div>
+		<div id="subsection1-1">示例文本1-1</div>
+		<div id="subsection1-2">示例文本1-2</div>
+		<div id="section2">示例文本2</div>
+		<div id="subsection2-1">示例文本2-1</div>
+		<div id="subsection2-2">示例文本2-2</div>
+		<p id="sub01">lalala</p>
+	</body>
+</html>
+-->
+
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		/*:after 选择器在被选元素的内容后面插入内容。*/
+		a[href $= "/"]:after, a[href$="htm"]:after, a[href$="html"]:after{
+		    content:" Web网页";
+		    color: red;
+		}
+		a[href$="jpg"]:after, a[href $= "jpeg"]:after{
+		    content:" JPEG图像文件";
+		    color: green;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li><a href="https://www.baidu.com/">HTML5+CSS3从入门到精髓</a></li>
+		<li><a href="http://CSS3.htm">CSS3的新特性</a></li>
+		<li><a href="img/flower.jpg">图像素材</a></li>
+	</ul>
+</body>
+</html>
+-->
+	
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>first-child选择器与last-child选择器使用示例</title>
+	<style type="text/css">
+		li:first-child{
+		    background-color: yellow;
+		}
+		li:last-child{
+		    background-color: skyblue;
+		}
+		
+		p:only-child
+		{
+			background:#ff0000;
+		}
+	</style>
+</head>
+<body>
+	<!-- :first-child和:last-child选择器-->
+	<h2>列表A</h2>
+	<ul>
+		<li>列表项目1</li>
+		<li>列表项目2</li>
+		<li>列表项目3</li>
+		<li>列表项目4</li>
+		<li>列表项目5</li>
+		<p>1123</p>
+	</ul>
+	<!-- :only-child 选择器-->
+	<h3>
+		<p>第一个段落</p>
+	</h3>
+	<div>
+		<p>第二个段落。</p>
+	</div>
+	<div>
+		<span>这是一个 span。</span>
+		<p>第三个段落。</p>
+	</div>
+	<p><b>段落注释：</b>Internet Explorer 不支持 :only-child 选择器。</p>
+</body>
+</html>
