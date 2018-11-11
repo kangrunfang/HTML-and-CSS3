@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+    	<title>Bootstrap基本结构</title>
+    	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<style>
+			#container{
+				margin:0 auto;
+				width:1000px;
+				height:1200px;
+			}
+			#nav{
+				width:1000px;
+				height:50px;
+				font-size: 15px;
+				background-color: grey;
+				color:white;
+			}
+			#nav span{
+				margin-left:30px;
+				line-height:50px;
+			}
+			#lunbo{
+				width:1000px;
+				height:300px;
+			}
+			#lunbo img{
+				width:1000px;
+				height:300px;
+			}
+			#text{
+				width:1000px;
+				height:150px;
+			}
+			#text div{
+				width:300px;
+				height:150px;
+				display:inline-block;
+				margin-left:20px;
+			}
+			#diagram{
+				width:900px;
+				height:180px;
+				margin:0 auto;
+			}
+			#content{
+				width:900px;
+				height:250px;
+				margin:0 auto;
+			}
+			#content div{
+				width:440px;
+				height:250px;
+				float:left;
+				margin-right:5px;
+			}
+			.list{
+				list-style: none;
+				float:left;
+				margin-right:10px;
+			}
+			#bottom{
+				width:900px;
+				height:250px;
+				margin:0 auto;
+			}
+			#bot1{
+				width:580px;
+				height:250px;
+				float:left;
+				margin-right:5px;
+			}
+			#bot2{
+				width:300px;
+				height:250px;
+				float:left;
+				padding-left:80px;
+			}
+			#address{
+				width:1000px;
+				height:80px;
+				background-color: black;
+				color:white;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<!--导航栏部分-->
+			<div id="nav">
+				<span class="glyphicon glyphicon-bell">Brand</span>
+				<span>link</span>
+				<span>link</span>
+				<span>link</span>
+				<span>link</span>
+				<span>link</span>
+			</div>
+			<!--轮播图部分-->
+			<div id="lunbo">
+				<div id="generic" class="carousel slide" data-ride="carousel">
+			  	<!-- 轮播（Carousel）指示标 -->
+			    <ol class="carousel-indicators">
+			      <li data-target="#generic" data-slide-to="0" class="active"></li>
+			      <li data-target="#generic" data-slide-to="1"></li>
+			      <li data-target="#generic" data-slide-to="2"></li>
+			    </ol>
+			    <!-- 轮播（Carousel）项目 -->
+			    <div class="carousel-inner" >
+			      <div class="item active">
+			        <img alt="First slide" src="img/lunbo1.jpg"/>
+					    <div class="carousel-caption">
+			        	</div>
+			      </div>
+			      <div class="item">
+			        <img alt="Second slide" src="img/lunbo2.jpg" >
+			        <div class="carousel-caption">
+			        </div>
+			      </div>
+			      <div class="item">
+			        <img alt="Third slide" src="img/lunbo3.jpg"  >
+					  	<div class="carousel-caption">
+			          	</div>
+			      </div>
+			    </div>
+			    <!-- 轮播（Carousel）导航 -->
+			    <a class="left carousel-control" href="#generic" data-slide="prev">
+			      <span class="glyphicon glyphicon-chevron-left"></span>
+			    </a>
+			    <a class="right carousel-control" href="#generic" data-slide="next">
+			      <span class="glyphicon glyphicon-chevron-right"></span>
+			    </a>
+			  </div>
+			</div>
+			<!--文字部分-->
+			<div id="text">
+				<div>
+					<h4><b>Content area1</b>&nbsp;&nbsp;<small>The first</small></h4>
+					<p>Bootstrap has a few easy ways to quikly get started,
+						each one appealing to a different skill level and use case.
+						Read through to see what suit your particular needs.
+					</p>
+				</div>
+				<div>
+					<h4><b>Content area2</b>&nbsp;&nbsp;<small>The second</small></h4>
+					<p>Bootstrap has a few easy ways to quikly get started,
+						each one appealing to a different skill level and use case.
+						Read through to see what suit your particular needs.
+					</p>
+				</div>
+				<div>
+					<h4><b>Content area3</b>&nbsp;&nbsp;<small>The third</small></h4>
+					<p>Bootstrap has a few easy ways to quikly get started,
+						each one appealing to a different skill level and use case.
+						Read through to see what suit your particular needs.
+					</p>
+				</div>
+			</div>
+			<!--表格部分-->
+			<div id="diagram">
+				<table class="table table-hover table-condensed">
+					<h4>Report table&nbsp;&nbsp;<small>From Detail</small></h4>
+		   			<thead>
+				      <tr>
+				         <th>#</th>
+				         <th>first</th>
+				         <th>second</th>
+				         <th>third</th>
+				         <th>fourth</th>
+				         <th>fifth</th>
+				      </tr>
+			   		</thead>
+				   	<tbody>
+				      <tr>
+				         <td>1</td>
+				         <td>Pernatibus et magnis</td>
+				         <td>what</td>
+				         <td>messages</td>
+				         <td>56</td>
+				         <td><button>提交</button></td>
+				      </tr>
+				      <tr>
+				         <td>2</td>
+				         <td>Pernatibus et</td>
+				         <td>you</td>
+				         <td>information</td>
+				         <td>44</td>
+				         <td><button>提交</button></td>
+				      </tr>
+				      <tr>
+				         <td>3</td>
+				         <td>nulla non</td>
+				         <td>test</td>
+				         <td>testing</td>
+				         <td>32</td>
+				         <td><button>提交</button></td>
+				      </tr>
+			   		</tbody>
+				</table>
+			</div>
+			<!--图文部分-->
+			<div id="content">
+				<div><img src="img/pic1.jpg" width="440px" height="250px"/></div>
+				<div>
+					<h4><b>Cum sociis natoque penatibus et magnis disparturient montes</b></h4>
+					<p>nascetur ridiculus mus.Nullam id dolors id nibh ultricles vehicula.Cum solls natoque,
+						each one appealing to a different skill level and use case.
+					</p>
+					<ul class="list">
+						<li>Maecenas sed diam eget risus</li>
+						<li>Maecenas sed diam eget risus</li>
+						<li>Maecenas sed diam eget risus</li>
+						<li>Maecenas sed diam eget risus</li>
+					</ul>
+					<img  class="list" src="img/pic2.jpg" width="140px" height="80px"/>
+				</div>
+			</div>
+			<div id="bottom">
+				<div id="bot1">
+					<h4><b>Images Show</b>&nbsp;&nbsp;<small>images</small></h4>
+					<span><img src="img/pic3.jpg" width="180px" height="100px"/></span>
+					<span><img src="img/pic4.jpg" width="180px" height="100px"/></span>
+					<span><img src="img/pic5.jpg" width="180px" height="100px"/></span>
+					<p>
+						nascetur ridiculus mus.Nullam id dolors id nibh ultricles vehicula.Cum solls natoque,
+						each one appealing to a different skill level and use case.
+					</p>
+				</div>
+				<div id="bot2">
+					<form action="" method="get">
+					<h4><b>User Login</b>&nbsp;&nbsp;<small>Form</small></h4>
+					<h4>Email:</h4>
+					<input type="text" value="Email"/>
+					<h4>Password:</h4>
+					<input type="text" value="Password"/>
+					<br/>
+					<label><input name="color" type="radio" value="" />blue </label> 
+					<label><input name="color" type="radio" value="" />red </label> 
+					</form>
+					<button>Sign in</button>
+				</div>
+			</div>
+			<div id="address">
+				<h4>网站地图</h4>
+				<p>copyright@www.xxxx.com</p>
+			</div>
+			
+		</div>
+	</body>
+</html>

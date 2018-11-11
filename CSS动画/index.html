@@ -1,0 +1,64 @@
+<!--
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			div{
+				background-color: yellow;
+				width:100px;
+				height:50px;
+				transition: background-color 1s linear;
+			}
+			div:hover{
+				background-color: #00ffff;
+				width:200px;
+				transition-property:background-color ,width;
+				transition-duration: 5s;
+				transition-delay: 2s;
+				transition-timing-function: ease-in;
+			}
+		</style>
+	</head>
+	<body>
+		<div>示例文字</div>
+	</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			#container{
+				width:200px;
+				height:200px;
+				position:relative;
+				border:1px solid red;
+			}
+			#text{
+				width:200px;
+				height:200px;
+				position:absolute;
+				top:0px;
+				left:0px;
+				border:1px solid black;
+				transform: scale(0,0);
+				transition-duration: 5s;
+				transition-timing-function: linear;
+			}
+			#container:hover #text{
+				transform: scale(1,1);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<img src="img/teenager.jpg" width="200px" height="200px"/>
+			<div id="text">beautiful</div>
+		</div>
+	</body>
+</html>
